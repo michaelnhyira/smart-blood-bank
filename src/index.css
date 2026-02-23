@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 99%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    --primary: 0 66% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 20% 96%;
+    --secondary-foreground: 0 50% 40%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 0 35% 94%;
+    --accent-foreground: 0 66% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 0 66% 47%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 15% 25%;
+    --sidebar-primary: 0 66% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 30% 95%;
+    --sidebar-accent-foreground: 0 66% 40%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 0 66% 47%;
+
+    --stock-healthy: 142 71% 45%;
+    --stock-low: 38 92% 50%;
+    --stock-critical: 0 84% 60%;
+    --chart-1: 0 66% 47%;
+    --chart-2: 220 70% 50%;
+    --chart-3: 142 71% 45%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 280 65% 60%;
+  }
+
+  .dark {
+    --background: 220 15% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 15% 11%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 15% 11%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 66% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 16%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 220 15% 16%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 0 30% 18%;
+    --accent-foreground: 0 50% 75%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 0 66% 55%;
+
+    --sidebar-background: 220 15% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 0 66% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 25% 16%;
+    --sidebar-accent-foreground: 0 50% 75%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 0 66% 55%;
+
+    --stock-healthy: 142 60% 40%;
+    --stock-low: 38 80% 45%;
+    --stock-critical: 0 70% 50%;
+    --chart-1: 0 66% 55%;
+    --chart-2: 220 60% 60%;
+    --chart-3: 142 60% 45%;
+    --chart-4: 38 80% 50%;
+    --chart-5: 280 55% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .medical-card {
+    @apply bg-card rounded-xl border shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+  .status-healthy {
+    @apply bg-[hsl(var(--stock-healthy)/0.1)] text-[hsl(var(--stock-healthy))];
+  }
+  .status-low {
+    @apply bg-[hsl(var(--stock-low)/0.1)] text-[hsl(var(--stock-low))];
+  }
+  .status-critical {
+    @apply bg-[hsl(var(--stock-critical)/0.1)] text-[hsl(var(--stock-critical))];
+  }
+}
